@@ -24,7 +24,7 @@ export default function App() {
   return isRefreshing ? (
     <strong>Getting user data please wait</strong>) : (
       <Layout>
-      <Suspense fallback={null}>
+      <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/register" element={
