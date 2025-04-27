@@ -1,7 +1,7 @@
 export default function HomePage() {
    return (
      <div>
-       <h1>This is HomePage</h1>
+       <h1>Welcome to the private contact book.Register and join</h1>
      </div>
    );
  }

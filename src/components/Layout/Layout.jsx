@@ -5,7 +5,7 @@ export default function Layout({ children }) {
     return (
         <div className={css.container}>
             <AppBar />
-            {children}
+            <main>{children}</main> 
         </div>
     );
 }

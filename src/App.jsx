@@ -27,13 +27,18 @@ export default function App() {
       <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="/login"
-              element={
+          <Route path="/register" element={
+              <RestrictedRoute component={<RegisterPage />} redirectTo="/contacts" />
+            }
+          />
+          <Route path="/login" element={
               <RestrictedRoute component={<LoginPage />} redirectTo="/contacts" />
-              }
-            />
-            <Route path="/contacts" element={<PrivateRoute component={<ContactsPage />} redirectTo="/login" />} />
+            }
+          />
+          <Route path="/contacts" element={
+              <PrivateRoute component={<ContactsPage />} redirectTo="/login" />
+            }
+          />
         </Routes>
       </Suspense>
     </Layout>
