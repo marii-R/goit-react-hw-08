@@ -1,0 +1,11 @@
+.link {
+    margin-right: 16px;
+    text-decoration: none;
+    color: #1976d2;
+    font-weight: 600;
+}
+
+.link:hover,
+.link:focus {
+    text-decoration: underline;
+}

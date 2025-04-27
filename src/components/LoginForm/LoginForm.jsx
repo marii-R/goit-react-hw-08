@@ -1,13 +1,20 @@
 import { Formik, Form, Field } from "formik";
 import { useDispatch } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 import css from "./LoginForm.module.css";
 import { logIn } from '../../redux/auth/operations';
 
 export default function LoginForm() {
     const dispatch = useDispatch();
+    const navigate = useNavigate()
 
     const handleSubmit = (values, actions) => {
-        dispatch(logIn(values));
+        dispatch(logIn(values))
+            .unwrap()
+            .then(() => {
+                navigate('/contacts');
+
+            })
         actions.resetForm();
     };
 

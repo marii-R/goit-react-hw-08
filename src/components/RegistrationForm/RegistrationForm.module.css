@@ -1,0 +1,29 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 300px;
+    margin: 40px auto;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+button {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2e7d32;
+}
