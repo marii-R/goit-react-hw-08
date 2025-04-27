@@ -8,7 +8,7 @@ const slice = createSlice({
   initialState: {
     items: [],
     isLoading: false,
-    error: null
+    error: null,
   },
   extraReducers: (builder) => {
         builder.addCase(fetchContacts.pending, (state) => {
