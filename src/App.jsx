@@ -21,6 +21,7 @@ export default function App() {
     dispatch(refreshUser())
   }, [dispatch]);
   
+
   return isRefreshing ? (
     <strong>Getting user data please wait</strong>) : (
       <Layout>
@@ -28,17 +29,20 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/register" element={
-              <RestrictedRoute component={<RegisterPage />} redirectTo="/contacts" />
-            }
-          />
+          <RestrictedRoute redirectTo="/contacts">
+            <RegisterPage />
+          </RestrictedRoute>
+          } />
           <Route path="/login" element={
-              <RestrictedRoute component={<LoginPage />} redirectTo="/contacts" />
-            }
-          />
+          <RestrictedRoute redirectTo="/contacts">
+            <LoginPage />
+          </RestrictedRoute>
+          } />
           <Route path="/contacts" element={
-              <PrivateRoute component={<ContactsPage />} redirectTo="/login" />
-            }
-          />
+              <PrivateRoute redirectTo="/login">
+                <ContactsPage />
+              </PrivateRoute>
+          } />
         </Routes>
       </Suspense>
     </Layout>

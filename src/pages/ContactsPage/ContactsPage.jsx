@@ -21,7 +21,7 @@ import { useDispatch, useSelector } from 'react-redux';
        <ContactForm />
        <SearchBox />
        {isLoading && <p>Loading...</p>}
-       {isError !== null && <p>Something went wrong...</p>}
+       {isError === false && <p>Something went wrong...</p>}
        {contacts.length > 0 && <ContactList />}
      </div>
    );

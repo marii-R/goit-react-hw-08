@@ -30,13 +30,13 @@ export default function ContactForm() {
       <Form className={css.form}>
         <div>
           <label className={css.text} htmlFor={nameFieldId}>Name</label>
-          <Field className={css.field} id="name" type="text" name="name" />
+          <Field className={css.field} id={nameFieldId} type="text" name="name" />
           <ErrorMessage className={css.error} name="name" component="span" />
         </div>
         <div>
           <label className={css.text} htmlFor={numberFieldId}>Number</label>
-          <Field className={css.field} id="number" type="tel" name="number" />
-          <ErrorMessage className={css.error} name="number" component="span" />
+          <Field className={css.field} id={numberFieldId} type="tel" name="number" />
+          <ErrorMessage className={css.error} name="name" component="div" />
         </div>
         <button className={css.button} type="submit">Add contact</button>
       </Form>
